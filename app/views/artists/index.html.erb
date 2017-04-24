@@ -1,5 +1,11 @@
-<h1>Artists</h1>
-<% @artist.each do |artist| %>
-  <%= artist.name %>
-  <img src="<%= artist.image_url %>" />
-<% end %>
+<div class="row">
+  <% @artist.each do |artist| %>
+    <div class="col-sm-3">
+      <div class="artist">     
+        <img src="<%= artist.image_url %>" class="image" />
+        <h3 class="title"><%= artist.name %></h3>
+        <%= link_to 'Ver más', artist, :class => "btn btn-primary" %>
+      </div> 
+    </div>
+  <% end %>
+</div>
